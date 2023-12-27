@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/obgnail/clash-api/clash"
+	"github.com/xxnuo/clash-api/clash"
 )
 
 func main() {
