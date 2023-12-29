@@ -252,3 +252,17 @@ func Restart() error {
 	}
 	return nil
 }
+
+// Shutdown 关闭内核
+//
+// 待内核合并 PR 后可用
+func Shutdown() error {
+	code, content, err := EasyRequest("post", "/shutdown", nil, nil)
+	if err != nil {
+		return errors.Trace(err)
+	}
+	if code != 200 {
+		return fmt.Errorf("unknown error: %s", string(content))
+	}
+	return nil
+}
