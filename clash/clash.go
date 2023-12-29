@@ -3,9 +3,10 @@ package clash
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/juju/errors"
 	"regexp"
 	"strings"
+
+	"github.com/juju/errors"
 )
 
 var reg = regexp.MustCompile(`\[(.+?)\](.+?)lAddr=(.+?)rAddr=(.+?)mode=(.+?)rule=(.+?)proxy=(.+)`)
